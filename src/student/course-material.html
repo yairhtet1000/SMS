@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../output.css" />
+    <script
+      src="https://kit.fontawesome.com/47fb921f6f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+
+      @layer components {
+        .name-bar {
+          @apply bg-[#173358] transition-transform duration-500 ease-linear;
+        }
+
+        .bar-right {
+          @apply fixed w-40 h-40 flex flex-col items-center justify-center right-0 rounded-bl-lg;
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div
+        class="bg-[#173358] h-[100vh] fixed flex justify-center items-center left-0 w-[200px]"
+      >
+        <div
+          class="h-[85vh] text-white flex items-center justify-between flex-col pt-3"
+        >
+          <img class="w-24" src="../../public/images/school-logo.png" alt="" />
+          <nav class="flex flex-col leading-8">
+            <a class="" href="./dashboard.html"
+              ><i class="fa-solid fa-house"></i> Dashboard</a
+            >
+            <a class="" href="./class-recordings.html"
+              ><i class="fa-solid fa-tv"></i> Class Recordings</a
+            >
+            <a class="" href="./course-material.html"
+              ><i class="fa-solid fa-book"></i> Course Material</a
+            >
+          </nav>
+
+          <button class="logout p-3">Logout</button>
+        </div>
+      </div>
+
+      <div class="name-bar bar-right" id="name-bar-right">
+        <img
+          class="w-20 rounded-full mb-4"
+          src="../../public/images/temp-profile.jpg"
+          alt=""
+        />
+        <div class="ms-3 text-[#f1f1f1]">
+          <h1>Yair Htet</h1>
+          <p>NCC level 4</p>
+        </div>
+      </div>
+
+      <main class="w-[full]">
+        <div class="w-[70%] mx-auto pt-4">
+          <!-- start here  -->
+          <div class="w-full my-3 p-3 bg-[#E1EFF6] rounded-xl">
+            <div class="w-full flex justify-between">
+              <h2 class="py-2 font-bold text-lg rounded-xl">Assignments</h2>
+              <span
+                class="px-5 py-2 font-bold bg-[#023E8A] text-[#f1f1f1] rounded-xl"
+                >View All</span
+              >
+            </div>
+
+            <table class="w-full table-auto border-separate border-spacing-3">
+              <thead class="leading-10">
+                <tr>
+                  <th class="bg-[#173358] text-[#f1f1f1] rounded-md">
+                    Subjects
+                  </th>
+                  <th class="bg-[#173358] text-[#f1f1f1] rounded-md">
+                    Due Date
+                  </th>
+                  <th class="bg-[#173358] text-[#f1f1f1] rounded-md">
+                    Submitted Date
+                  </th>
+                  <th class=""></th>
+                </tr>
+              </thead>
+
+              <tbody class="text-center">
+                <tr>
+                  <td class="bg-[#BBDEFB] rounded-md">
+                    <h2 class="font-bold text-lg leading-5">
+                      Introduction To Computer Science
+                    </h2>
+                    <span class="font-semibold"
+                      >Assignment Title or Question Name</span
+                    >
+                  </td>
+                  <td class="bg-[#90CAF9] rounded-md font-semibold">
+                    27/5/2024
+                  </td>
+                  <td class="bg-[#90CAF9] rounded-md font-semibold">
+                    23/5/2024
+                  </td>
+                  <td class="bg-[#64B5F6] rounded-md font-semibold">
+                    Submitted
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="bg-[#BBDEFB] rounded-md">
+                    <h2 class="font-bold text-lg leading-5">
+                      Introduction To Programming
+                    </h2>
+                    <span class="font-semibold"
+                      >Assignment Title or Question Name</span
+                    >
+                  </td>
+                  <td class="bg-[#90CAF9] rounded-md font-semibold">
+                    27/5/2024
+                  </td>
+                  <td class="bg-[#90CAF9] rounded-md font-semibold">
+                    24/5/2024
+                  </td>
+                  <td class="bg-[#64B5F6] rounded-md font-semibold">Pending</td>
+                </tr>
+
+                <tr>
+                  <td class="bg-[#BBDEFB] rounded-md">
+                    <h2 class="font-bold text-lg leading-5">
+                      Mathematical Skills For Computing
+                    </h2>
+                    <span class="font-semibold"
+                      >Assignment Title or Question Name</span
+                    >
+                  </td>
+                  <td class="bg-[#90CAF9] rounded-md font-semibold">
+                    27/5/2024
+                  </td>
+                  <td class="bg-[#90CAF9] rounded-md font-semibold">
+                    22/5/2024
+                  </td>
+                  <td class="bg-[#64B5F6] rounded-md font-semibold">
+                    Submitted
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="bg-[#BBDEFB] rounded-md">
+                    <h2 class="font-bold text-lg leading-5">
+                      Study and Presentation Skills
+                    </h2>
+                    <span class="font-semibold"
+                      >Assignment Title or Question Name</span
+                    >
+                  </td>
+                  <td class="bg-[#90CAF9] rounded-md font-semibold">
+                    27/5/2024
+                  </td>
+                  <td class="bg-[#90CAF9] rounded-md font-semibold">
+                    25/5/2024
+                  </td>
+                  <td class="bg-[#64B5F6] rounded-md font-semibold">Pending</td>
+                </tr>
+
+                <tr>
+                  <td class="bg-[#BBDEFB] rounded-md">
+                    <h2 class="font-bold text-lg leading-5">Digital World</h2>
+                    <span class="font-semibold"
+                      >Assignment Title or Question Name</span
+                    >
+                  </td>
+                  <td class="bg-[#90CAF9] rounded-md font-semibold">
+                    27/5/2024
+                  </td>
+                  <td class="bg-[#90CAF9] rounded-md font-semibold">
+                    23/5/2024
+                  </td>
+                  <td class="bg-[#64B5F6] rounded-md font-semibold">
+                    Submitted
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="w-full flex">
+            <div class="w-[56%] me-[1%] bg-[#E1EFF6] rounded-xl shadow-lg">
+              <div class="w-full p-3 flex justify-between mx-auto items-center">
+                <h2 class="text-xl font-bold">Textbooks Soft Copies</h2>
+                <span
+                  class="px-5 py-2 font-bold bg-[#023E8A] text-white rounded-xl"
+                >
+                  View all
+                </span>
+              </div>
+
+              <div class="h-56 overflow-y-scroll text-[#f1f1f1]">
+                <div
+                  class="w-[95%] h-[60px] bg-gradient-to-b from-[#0C56C1] to-[#173358] rounded-md mx-auto my-3 flex justify-between px-5 items-center"
+                >
+                  <h2 class="font-semi-bold text-lg text-center w-full">
+                    Introduction To Computer Science
+                  </h2>
+                  <i class="fa-solid fa-circle-down"></i>
+                </div>
+
+                <div
+                  class="w-[95%] h-[60px] bg-gradient-to-b from-[#0C56C1] to-[#173358] rounded-md mx-auto my-3 flex justify-between px-5 items-center"
+                >
+                  <h2 class="font-semi-bold text-lg text-center w-full">
+                    Introduction To Programming
+                  </h2>
+                  <i class="fa-solid fa-circle-down"></i>
+                </div>
+
+                <div
+                  class="w-[95%] h-[60px] bg-gradient-to-b from-[#0C56C1] to-[#173358] rounded-md mx-auto my-3 flex justify-between px-5 items-center"
+                >
+                  <h2 class="font-semi-bold text-lg text-center w-full">
+                    Study and Presentation Skills
+                  </h2>
+                  <i class="fa-solid fa-circle-down"></i>
+                </div>
+
+                <div
+                  class="w-[95%] h-[60px] bg-gradient-to-b from-[#0C56C1] to-[#173358] rounded-md mx-auto my-3 flex justify-between px-5 items-center"
+                >
+                  <h2 class="font-semi-bold text-lg text-center w-full">
+                    Mathematical Skills For Computing
+                  </h2>
+                  <i class="fa-solid fa-circle-down"></i>
+                </div>
+
+                <div
+                  class="w-[95%] h-[60px] bg-gradient-to-b from-[#0C56C1] to-[#173358] rounded-md mx-auto my-3 flex justify-between px-5 items-center"
+                >
+                  <h2 class="font-semi-bold text-lg text-center w-full">
+                    Digital World
+                  </h2>
+                  <i class="fa-solid fa-circle-down"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-[42%] ms-[1%] bg-[#E1EFF6] rounded-2xl shadow-lg">
+              <div class="w-full p-3 mx-auto flex justify-between">
+                <h2 class="text-xl font-bold">Online Learning Resources</h2>
+                <span
+                  class="px-5 py-2 font-bold bg-[#023E8A] text-white rounded-xl"
+                >
+                  View all
+                </span>
+              </div>
+
+              <div class="h-56 overflow-y-scroll">
+                <a
+                  class="w-[95%] h-[60px] bg-gradient-to-b from-[#173358] to-[#0C56C1] rounded-md mx-auto my-3 flex justify-center items-center"
+                  href="https://www.youtube.com/results?search_query=myat+mon+aye"
+                  target="_blank"
+                >
+                  <div class="w-[85%] m-5 px-5 flex items-center">
+                    <img
+                      src="../../public/images/DMMA-YT-PFP.jpg"
+                      alt=""
+                      class="size-12 rounded-full"
+                    />
+                    <div class="ms-5 text-[#f1f1f1]">
+                      <h2 class="font-semibold text-lg leading-5">
+                        <i class="fa-brands fa-youtube"></i>
+                        Myat Mon Aye
+                      </h2>
+                      <span class="font-semibold text-xs"
+                        ><i class="fa-brands fa-facebook"></i>
+                        Study Right Now
+                      </span>
+                    </div>
+                  </div>
+                </a>
+
+                <a
+                  class="w-[95%] h-[60px] bg-gradient-to-b from-[#173358] to-[#0C56C1] rounded-md mx-auto my-3 flex justify-center items-center"
+                  href="https://www.youtube.com/results?search_query=msquare+programming"
+                  target="_blank"
+                >
+                  <div class="w-[85%] m-5 px-5 flex items-center">
+                    <img
+                      src="../../public/images/MSquare-YT-PFP.jpg"
+                      alt=""
+                      class="size-12 rounded-full"
+                    />
+                    <div class="ms-5 text-[#f1f1f1]">
+                      <h2 class="font-semibold text-lg leading-5">
+                        <i class="fa-brands fa-youtube"></i>
+                        MSquare Programming
+                      </h2>
+                      <span class="font-semibold text-xs"
+                        ><i class="fa-brands fa-facebook"></i>
+                        MSquare Programming
+                      </span>
+                    </div>
+                  </div>
+                </a>
+
+                <a
+                  class="w-[95%] h-[60px] bg-gradient-to-b from-[#173358] to-[#0C56C1] rounded-md mx-auto my-3 flex justify-center items-center"
+                  href="https://www.youtube.com/@NareshIT"
+                  target="_blank"
+                >
+                  <div class="w-[85%] m-5 px-5 flex items-center">
+                    <img
+                      src="../../public/images/NiT-YT-PFP.jpg"
+                      alt=""
+                      class="size-12 rounded-full"
+                    />
+                    <div class="ms-5 text-[#f1f1f1]">
+                      <h2 class="font-semibold text-lg">
+                        <i class="fa-brands fa-youtube"></i>
+                        Naresh i Technologies
+                      </h2>
+                    </div>
+                  </div>
+                </a>
+
+                <a
+                  class="w-[95%] h-[60px] bg-gradient-to-b from-[#173358] to-[#0C56C1] rounded-md mx-auto my-3 flex justify-center items-center"
+                  href="https://youtube.com/@brocodez?si=5X_rd8qkbKl6E4PN "
+                  target="_blank"
+                >
+                  <div class="w-[85%] m-5 px-5 flex items-center">
+                    <img
+                      src="../../public/images/BroCode-YT-PFP.jpg"
+                      alt=""
+                      class="size-12 rounded-full"
+                    />
+                    <div class="ms-5 text-[#f1f1f1]">
+                      <h2 class="font-semibold text-lg">
+                        <i class="fa-brands fa-youtube"></i>
+                        Bro Code
+                      </h2>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full bg-[#E1EFF6] my-4 rounded-xl shadow-lg">
+            <div class="w-full mx-auto p-3 flex justify-between items-center">
+              <h2 class="text-xl font-bold">Old Question</h2>
+              <button class="px-5 py-2 bg-[#023E8A] text-white rounded">
+                View all
+              </button>
+            </div>
+
+            <div class="w-full flex rounded-xl pb-3 justify-around">
+              <div
+                class="w-[18%] bg-gradient-to-b from-[#2196F3] from-10% to-[#0D47A1] rounded-xl p-3 flex flex-col items-center justify-center"
+              >
+                <img
+                  src="../../public/images/sps.jpg"
+                  alt=""
+                  class="size-20 rounded-full mx-auto"
+                />
+                <h2 class="font-bold text-xl">SPS</h2>
+                <span class="text-[#f1f1f1]">6 Files</span>
+              </div>
+
+              <div
+                class="w-[18%] bg-gradient-to-b from-[#2196F3] from-10% to-[#0D47A1] rounded-xl p-3 flex flex-col items-center justify-center"
+              >
+                <img
+                  src="../../public/images/itp.jpg"
+                  alt=""
+                  class="size-20 rounded-full mx-auto"
+                />
+                <h2 class="font-bold text-xl">ITP</h2>
+                <span class="text-[#f1f1f1]">6 Files</span>
+              </div>
+
+              <div
+                class="w-[18%] bg-gradient-to-b from-[#2196F3] from-10% to-[#0D47A1] rounded-xl p-3 flex flex-col items-center justify-center"
+              >
+                <img
+                  src="../../public/images/itcs.jpg"
+                  alt=""
+                  class="size-20 rounded-full mx-auto"
+                />
+                <h2 class="font-bold text-xl">ITCS</h2>
+                <span class="text-[#f1f1f1]">6 Files</span>
+              </div>
+
+              <div
+                class="w-[18%] bg-gradient-to-b from-[#2196F3] from-10% to-[#0D47A1] rounded-xl p-3 flex flex-col items-center justify-center"
+              >
+                <img
+                  src="../../public/images/dw.jpg"
+                  alt=""
+                  class="size-20 rounded-full mx-auto"
+                />
+                <h2 class="font-bold text-xl">DW</h2>
+                <span class="text-[#f1f1f1]">6 Files</span>
+              </div>
+
+              <div
+                class="w-[18%] bg-gradient-to-b from-[#2196F3] from-10% to-[#0D47A1] rounded-xl p-3 flex flex-col items-center justify-center"
+              >
+                <img
+                  src="../../public/images/dw.jpg"
+                  alt=""
+                  class="size-20 rounded-full mx-auto"
+                />
+                <h2 class="font-bold text-xl">MSFC</h2>
+                <span class="text-[#f1f1f1]">6 Files</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../output.css" />
+    <script
+      src="https://kit.fontawesome.com/47fb921f6f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+
+      @layer components {
+        .name-bar {
+          @apply bg-[#173358] transition-transform duration-500 ease-linear;
+        }
+
+        .bar-right {
+          @apply fixed w-40 h-40 flex flex-col items-center justify-center right-0 rounded-bl-lg;
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div
+        class="bg-[#173358] h-[100vh] fixed flex justify-center items-center left-0 w-[200px]"
+      >
+        <div
+          class="h-[85vh] text-white flex items-center justify-between flex-col pt-3"
+        >
+          <img class="w-24" src="../../public/images/school-logo.png" alt="" />
+          <nav class="flex flex-col leading-8">
+            <a class="" href="./dashboard.html"
+              ><i class="fa-solid fa-house"></i> Dashboard</a
+            >
+            <a class="" href="./class-recordings.html"
+              ><i class="fa-solid fa-tv"></i> Class Recordings</a
+            >
+            <a class="" href="./course-material.html"
+              ><i class="fa-solid fa-book"></i> Course Material</a
+            >
+          </nav>
+
+          <button class="logout p-3">Logout</button>
+        </div>
+      </div>
+
+      <div class="name-bar bar-right" id="name-bar-right">
+        <img
+          class="w-20 rounded-full mb-4"
+          src="../../public/images/temp-profile.jpg"
+          alt=""
+        />
+        <div class="ms-3 text-[#f1f1f1]">
+          <h1>Yair Htet</h1>
+          <p>NCC level 4</p>
+        </div>
+      </div>
+
+      <!-- main body but full width -->
+      <main class="w-full">
+        <!-- main body with code width -->
+        <div class="w-[70%] mx-auto p-3">
+          <h2
+            class="inline-block font-bold text-2xl my-3 px-16 py-5 rounded-xl bg-[#173358] text-[#f1f1f1]"
+          >
+            Class Recordings
+          </h2>
+
+          <!-- sps record div -->
+          <div class="w-full my-3 p-3 bg-[#E1EFF6] rounded-xl">
+            <div class="flex justify-between">
+              <span class="py-2 font-bold text-lg rounded-xl"
+                >Study Presentation Skill</span
+              >
+              <span
+                class="px-6 py-2 font-bold bg-[#023E8A] text-[#f1f1f1] rounded-xl"
+                >View All</span
+              >
+            </div>
+
+            <!-- videos -->
+            <div class="w-full flex overflow-x-scroll" id="sps-records"></div>
+          </div>
+
+          <!-- itp record div -->
+          <div class="w-full my-3 p-3 bg-[#E1EFF6] rounded-xl">
+            <div class="flex justify-between">
+              <span class="py-2 font-bold text-lg rounded-xl"
+                >Introduction To Programming</span
+              >
+              <span
+                class="px-6 py-2 font-bold bg-[#023E8A] text-[#f1f1f1] rounded-xl"
+                >View All</span
+              >
+            </div>
+
+            <div class="w-full flex overflow-x-scroll" id="itp-records"></div>
+          </div>
+
+          <!-- dw record div -->
+          <div class="w-full my-3 p-3 bg-[#E1EFF6] rounded-xl">
+            <div class="flex justify-between">
+              <span class="py-2 font-bold text-lg rounded-xl"
+                >Digital World</span
+              >
+              <span
+                class="px-6 py-2 font-bold bg-[#023E8A] text-[#f1f1f1] rounded-xl"
+                >View All</span
+              >
+            </div>
+
+            <div class="w-full flex overflow-x-scroll" id="dw-records"></div>
+          </div>
+
+          <!-- msfc record div -->
+          <div class="w-full my-3 p-3 bg-[#E1EFF6] rounded-xl">
+            <div class="flex justify-between">
+              <span class="py-2 font-bold text-lg rounded-xl"
+                >Mathematical Skills For Computing</span
+              >
+              <span
+                class="px-6 py-2 font-bold bg-[#023E8A] text-[#f1f1f1] rounded-xl"
+                >View All</span
+              >
+            </div>
+
+            <div class="w-full flex overflow-x-scroll" id="msfc-records"></div>
+          </div>
+
+          <!-- itcs record div -->
+          <div class="w-full my-3 p-3 bg-[#E1EFF6] rounded-xl">
+            <div class="flex justify-between">
+              <span class="py-2 font-bold text-lg rounded-xl"
+                >Introduction To Computer Science</span
+              >
+              <span
+                class="px-6 py-2 font-bold bg-[#023E8A] text-[#f1f1f1] rounded-xl"
+                >View All</span
+              >
+            </div>
+
+            <div class="w-full flex overflow-x-scroll" id="itcs-records"></div>
+          </div>
+
+          <!-- it-team record div -->
+          <div class="w-full my-3 p-3 bg-[#E1EFF6] rounded-xl">
+            <div class="flex justify-between">
+              <span class="py-2 font-bold text-lg rounded-xl">IT Team</span>
+              <span
+                class="px-6 py-2 font-bold bg-[#023E8A] text-[#f1f1f1] rounded-xl"
+                >View All</span
+              >
+            </div>
+
+            <div
+              class="w-full flex overflow-x-scroll"
+              id="it-team-records"
+            ></div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./js/class-recording.js"></script>
+  </body>
+</html>

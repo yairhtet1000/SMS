@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../output.css" />
+    <script
+      src="https://kit.fontawesome.com/47fb921f6f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+
+      @layer components {
+        .name-bar {
+          @apply bg-[#173358] transition-all duration-200 ease-in origin-top-right;
+        }
+        .bar-top {
+          @apply w-[60%] p-5 ms-[-600px] flex items-center rounded-bl-md rounded-br-[50px];
+        }
+        .bar-right {
+          @apply fixed w-[14%] h-32 flex flex-col items-center justify-center top-0 right-[-300px] rounded-bl-lg;
+        }
+        .bar-right p {
+          @apply hidden;
+        }
+
+        .card {
+          scroll-snap-align: start;
+        }
+
+        /* width */
+        .class-rec::-webkit-scrollbar {
+          width: 1px;
+          height: 10px;
+        }
+
+        /* Track */
+        .class-rec::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 10px;
+        }
+
+        /* Handle */
+        .class-rec::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        .class-rec::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+        .calender li {
+          @apply select-none font-bold;
+        }
+        .days li,
+        .weeks li {
+          @apply w-[calc(100%/7)] border p-3;
+        }
+
+        .days li {
+          @apply cursor-pointer hover:bg-[#f1f1f1];
+        }
+        .days .current-day {
+          @apply bg-[#0C56C1] text-white  hover:bg-[#173358];
+        }
+        .days .disable-text {
+          @apply text-[#c3c3c3];
+        }
+        .calender-btn {
+          @apply hover:bg-[#0C56C1] hover:text-[#f1f1f1] bg-[#f1f1f1] px-2 text-[#0C56C1] rounded-full;
+        }
+        .payment-con {
+          background-image: url("../../public/images/payment-cover.jpg");
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div
+        class="bg-[#173358] h-[100vh] fixed flex justify-center items-center left-0 w-[200px]"
+      >
+        <div
+          class="h-[85vh] text-white flex items-center justify-between flex-col pt-3"
+        >
+          <img class="w-24" src="../../public/images/school-logo.png" alt="" />
+          <nav class="flex flex-col leading-8">
+            <a class="" href="./dashboard.html"
+              ><i class="fa-solid fa-house"></i> Dashboard</a
+            >
+            <a class="" href="./class-recordings.html"
+              ><i class="fa-solid fa-tv"></i> Class Recordings</a
+            >
+            <a class="" href="./course-material.html"
+              ><i class="fa-solid fa-book"></i> Course Material</a
+            >
+          </nav>
+
+          <button class="logout p-3">Logout</button>
+        </div>
+      </div>
+
+      <main class="w-[full]">
+        <div class="w-[70%] mx-auto">
+          <div class="h-44 overflow-auto">
+            <div class="name-bar bar-top" id="name-bar">
+              <img
+                class="w-20 rounded-full mb-4"
+                src="../../public/images/temp-profile.jpg"
+                alt=""
+              />
+              <div class="ms-3 text-[#f1f1f1]">
+                <h1>Yair Htet</h1>
+                <p>NCC level 4 Diploma in Computing</p>
+              </div>
+            </div>
+
+            <div class="name-bar bar-right" id="name-bar-right">
+              <img
+                class="w-20 rounded-full mb-4"
+                src="../../public/images/temp-profile.jpg"
+                alt=""
+              />
+              <div class="ms-3 text-[#f1f1f1]">
+                <h1>Yair Htet</h1>
+                <p>NCC level 4 Diploma in Computing</p>
+              </div>
+            </div>
+          </div>
+
+          <section
+            class="flex flex-col items-center justify-between shadow-md bg-[#E1EFF6] p-3 rounded-md"
+          >
+            <div class="flex justify-between items-center px-3 w-full">
+              <h1 class="text-2xl font-bold select-none">Class Recordings</h1>
+              <button>View All</button>
+            </div>
+            <div
+              class="class-rec grid gap-6 grid-flow-col p-4 overflow-x-auto select-none w-[96%] mb-5"
+              id="class-rec"
+            >
+              <!-- javascript -->
+            </div>
+          </section>
+
+          <div class="w-full flex mt-10 justify-between">
+            <div
+              class="w-[49%] shadow-md p-4 roundet-md bg-[#E1EFF6] rounded-md"
+            >
+              <div class="flex w-full justify-between mb-5">
+                <h1 class="text-2xl font-bold">Attendance by class</h1>
+                <div>...</div>
+              </div>
+              <div class="h-[250px]">
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+
+            <div class="w-[49%] shadow-md bg-[#E1EFF6] rounded-md">
+              <h1 class="text-2xl font-bold p-3">Course Material</h1>
+              <div
+                class="grid grid-cols-2 gap-4 w-full p-5 bg-balck h-[85%]"
+                id="courses"
+              >
+                <!-- javascript -->
+              </div>
+            </div>
+          </div>
+
+          <div class="flex my-10 justify-between">
+            <div
+              class="calender w-[60%] shadow-md p-4 rounded-lg text-[#173358] bg-[#E1EFF6]"
+            >
+              <h1 class="text-2xl font-bold">Calender</h1>
+              <div class="">
+                <div class="flex w-full items-center justify-center mb-5">
+                  <button class="calender-btn" id="pre"><</button>
+                  <h1 class="px-6" id="current-date">May 2024</h1>
+                  <button class="calender-btn" id="next">></button>
+                </div>
+                <ul class="weeks flex justify-evenly">
+                  <li>Mon</li>
+                  <li>Tue</li>
+                  <li>Wed</li>
+                  <li>Thu</li>
+                  <li>Fri</li>
+                  <li>Sat</li>
+                  <li>Sun</li>
+                </ul>
+                <ul class="days flex justify-start flex-wrap"></ul>
+              </div>
+            </div>
+
+            <div class="w-[45%] h-full flex flex-col justify-between ms-5">
+              <div class="shadow-lg h-[250px] p-5 rounded-md bg-[#E1EFF6]">
+                <canvas id="pie-chart"></canvas>
+              </div>
+              <div class="h-[200px] mt-5 shadow-sm">
+                <div
+                  class="flex flex-col h-full rounded-lg overflow-hidden relative text-white shadow-lg bg-[#E1EFF6]"
+                >
+                  <img
+                    class="w-14 h-14 rounded-full absolute translate-x-[-50%] translate-y-[-50%] left-[50%] top-[50%]"
+                    src="../../public/images/payment1.jpg"
+                  />
+                  <div class="payment-con p-5 h-[50%]"></div>
+                  <div class="p-5 h-[50%] pt-10">
+                    <p class="text-center text-black">Payment</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="./js/dashboard.js"></script>
+  </body>
+</html>
