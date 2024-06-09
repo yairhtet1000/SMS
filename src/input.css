@@ -1,3 +1,74 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .content-auto {
+    content-visibility: auto;
+  }
+}
+
+@layer components {
+  .name-bar {
+    @apply bg-[#173358] transition-all duration-200 ease-in origin-top-right;
+  }
+  .bar-top {
+    @apply w-[60%] p-5 ms-[-600px] flex items-center rounded-bl-md rounded-br-[50px];
+  }
+  .bar-right {
+    @apply fixed w-[14%] h-32 flex flex-col items-center justify-center top-0 right-0 rounded-bl-lg;
+  }
+  .bar-right p {
+    @apply hidden;
+  }
+
+  .card {
+    scroll-snap-align: start;
+  }
+
+  /* width */
+  .class-rec::-webkit-scrollbar {
+    width: 1px;
+    height: 10px;
+  }
+
+  /* Track */
+  .class-rec::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  .class-rec::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  .class-rec::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  .calender li {
+    @apply select-none font-bold;
+  }
+  .days li,
+  .weeks li {
+    @apply w-[calc(100%/7)] border p-3;
+  }
+
+  .days li {
+    @apply cursor-pointer hover:bg-[#f1f1f1];
+  }
+  .days .current-day {
+    @apply bg-[#0C56C1] text-white  hover:bg-[#173358];
+  }
+  .days .disable-text {
+    @apply text-[#c3c3c3];
+  }
+  .calender-btn {
+    @apply hover:bg-[#0C56C1] hover:text-[#f1f1f1] bg-[#f1f1f1] px-2 text-[#0C56C1] rounded-full;
+  }
+  .payment-con {
+    background-image: url("../../public/images/payment-cover.jpg");
+  }
+}

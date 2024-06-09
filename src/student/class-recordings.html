@@ -9,23 +9,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <style type="text/tailwindcss">
-      @layer utilities {
-        .content-auto {
-          content-visibility: auto;
-        }
-      }
-
-      @layer components {
-        .name-bar {
-          @apply bg-[#173358] transition-transform duration-500 ease-linear;
-        }
-
-        .bar-right {
-          @apply fixed w-40 h-40 flex flex-col items-center justify-center right-0 rounded-bl-lg;
-        }
-      }
-    </style>
     <title>Class Recordings</title>
   </head>
   <body>
@@ -53,7 +36,7 @@
         </div>
       </div>
 
-      <div class="name-bar bar-right" id="name-bar-right">
+      <div class="name-bar bar-right">
         <img
           class="w-20 rounded-full mb-4"
           src="../../public/images/temp-profile.jpg"
