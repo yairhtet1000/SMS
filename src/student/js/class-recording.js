@@ -46,8 +46,7 @@ createRecordings = (recording) => {
   titleElement.textContent = recording.title;
   titleElement.classList.add("text-center", "text-[#f1f1f1]", "font-semi-bold");
 
-  record.appendChild(videoRecords);
-  record.appendChild(titleElement);
+  record.appendChild(videoRecords, titleElement);
 
   return record;
 };
