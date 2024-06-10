@@ -5,228 +5,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const list_view = document.getElementById("list-view");
   const grid_view = document.getElementById("grid-view");
 
-  const students = [
-    {
-      id: "NNU0001",
-      name: "Hein Htet Kyaw",
-      gender: "Male",
-      birthday: "01-01-2004",
-      phone_number: "09959580804",
-      address: "Mandalay",
-      image: "../../public/images/HeinHtetKyaw.jpg",
-      program: "NCC",
-      level: 4,
-    },
-    {
-      id: "NNU0002",
-      name: "Htet Eaindra Aung",
-      gender: "Female",
-      birthday: "01-01-2004",
-      phone_number: "09959580804",
-      address: "Mandalay",
-      image: "../../public/images/MaHtet.jpg",
-      program: "NCC",
-      level: 4,
-    },
-    {
-      id: "NNU0003",
-      name: "Ngwe Zin Thaw",
-      gender: "Female",
-      birthday: "01-01-2004",
-      phone_number: "09959580804",
-      address: "Mandalay",
-      image: "../../public/images/NgweJin.jpg",
-      program: "NCC",
-      level: 5,
-    },
-    {
-      id: "NNU0004",
-      name: "Nang Noon Kham Si",
-      gender: "Female",
-      birthday: "01-01-2004",
-      phone_number: "09959580804",
-      address: "Mandalay",
-      image: "../../public/images/AhSii.jpg",
-      program: "NCC",
-      level: 4,
-    },
-    {
-      id: "NNU0005",
-      name: "Moh Moh Thant",
-      gender: "Female",
-      birthday: "01-01-2004",
-      phone_number: "09959580804",
-      address: "Mandalay",
-      image: "../../public/images/Olive.jpg",
-      program: "NCC",
-      level: 4,
-    },
-    {
-      id: "NNU0006",
-      name: "Phone Thet Naing Tun",
-      gender: "Male",
-      birthday: "01-01-2004",
-      phone_number: "09959580804",
-      address: "Mandalay",
-      image: "../../public/images/William.jpg",
-      program: "NCC",
-      level: 4,
-    },
-    {
-      id: "NNU0007",
-      name: "Yae Wint Aung",
-      gender: "Male",
-      birthday: "01-01-2004",
-      phone_number: "09959580804",
-      address: "Mandalay",
-      image: "../../public/images/YaeWint.jpg",
-      program: "NCC",
-      level: 4,
-    },
-    {
-      id: "NNU0008",
-      name: "Min Hein Htut",
-      gender: "Male",
-      birthday: "01-01-2004",
-      phone_number: "09959580804",
-      address: "Mandalay",
-      image: "../../public/images/MinHeinHtut.jpg",
-      program: "NCC",
-      level: 4,
-    },
-    {
-      id: "NNU0009",
-      name: "Pyae Sone Hein",
-      gender: "Male",
-      birthday: "01-01-2004",
-      phone_number: "09959580804",
-      address: "Mandalay",
-      image: "../../public/images/PyaeSoneHein.jpg",
-      program: "NCC",
-      level: 5,
-    },
-    {
-      id: "NNU0010",
-      name: "Si Thu Lin",
-      gender: "Male",
-      birthday: "01-01-2004",
-      phone_number: "09959580804",
-      address: "Mandalay",
-      image: "../../public/images/SiThuLin.jpg",
-      program: "NCC",
-      level: 4,
-    },
-    {
-      id: "NNU0011",
-      name: "Sut Seng Aung",
-      gender: "Female",
-      birthday: "01-01-2004",
-      phone_number: "09959580804",
-      address: "Mandalay",
-      image: "../../public/images/SutSengAung.jpg",
-      program: "NCC",
-      level: 3,
-    },
-    {
-      id: "NNU0012",
-      name: "Zaw Zaw Naing",
-      gender: "Male",
-      birthday: "01-01-2004",
-      phone_number: "09959580804",
-      address: "Mandalay",
-      image: "../../public/images/ZawZawNaing.jpg",
-      program: "NCC",
-      level: 4,
-    },
-    {
-      id: "NNU0013",
-      name: "Moe Hnin Wai",
-      gender: "Female",
-      birthday: "01-01-2004",
-      phone_number: "09959580804",
-      address: "Mandalay",
-      image: "../../public/images/MoeHninWai.jpg",
-      program: "NCC",
-      level: 3,
-    },
-    {
-      id: "NNU0014",
-      name: "GED Student",
-      gender: "Female",
-      birthday: "01-01-2004",
-      phone_number: "09959580804",
-      address: "Mandalay",
-      image: "../../public/images/ged-girl.jpg",
-      program: "GED",
-      // level: 3,
-    },
-    {
-      id: "NNU0015",
-      name: "Itic Lynn",
-      gender: "Female",
-      birthday: "01-01-2004",
-      phone_number: "09959580804",
-      address: "Mandalay",
-      image: "../../public/images/IticLynn.jpg",
-      program: "ABE",
-      level: 4,
-    },
-    {
-      id: "NNU0016",
-      name: "Khin Thu Zar",
-      gender: "Female",
-      birthday: "01-01-2004",
-      phone_number: "09959580804",
-      address: "Mandalay",
-      image: "../../public/images/KhinThuZar.jpg",
-      program: "ABE",
-      level: 4,
-    },
-    {
-      id: "NNU0017",
-      name: "May Tha Zin Nwe",
-      gender: "Female",
-      birthday: "01-01-2004",
-      phone_number: "09959580804",
-      address: "Mandalay",
-      image: "../../public/images/MayThaZinNwe.jpg",
-      program: "ABE",
-      level: 4,
-    },
-    {
-      id: "NNU0018",
-      name: "Mira",
-      gender: "Female",
-      birthday: "01-01-2004",
-      phone_number: "09959580804",
-      address: "Mandalay",
-      image: "../../public/images/Mira.jpg",
-      program: "ABE",
-      level: 4,
-    },
-    {
-      id: "NNU0019",
-      name: "Swan Saung",
-      gender: "Male",
-      birthday: "01-01-2004",
-      phone_number: "09959580804",
-      address: "Mandalay",
-      image: "../../public/images/SwanSaung.jpg",
-      program: "GED",
-      // level: 3,
-    },
-    {
-      id: "NNU0020",
-      name: "Zin Wai Yan Oo",
-      gender: "Male",
-      birthday: "01-01-2004",
-      phone_number: "09959580804",
-      address: "Mandalay",
-      image: "../../public/images/ZinWaiYanOo.jpg",
-      program: "ABE",
-      level: 5,
-    },
-  ];
+  let studentData = [];
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch("../student-data.json");
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      studentData = await response.json();
+      filterAndDisplayStudents("ALL", "ALL");
+    } catch (error) {
+      console.log("Error fetching data: ", error);
+    }
+  };
+
+  fetchData();
 
   program.addEventListener("change", (event) => {
     const selectedProgram = event.target.value;
@@ -239,6 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const displayStudents = (studentsToDisplay) => {
+    showStudent.innerHTML = "";
+
     list_view.addEventListener("click", () => {
       showStudent.innerHTML = "";
 
@@ -276,7 +72,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const imgStd = document.createElement("img");
         imgStd.src = student.image;
-        imgStd.classList.add("size-24", "object-cover", "my-2", "rounded-full");
+        imgStd.classList.add(
+          "size-16",
+          "object-cover",
+          "mx-auto",
+          "my-2",
+          "rounded-full"
+        );
         imgTD.appendChild(imgStd);
 
         const idTD = document.createElement("td");
@@ -314,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
         infoContainer.classList.add(
           "w-[18%]",
           "bg-[#173358]",
-          "my-3",
+          "m-2",
           "p-5",
           "flex",
           "flex-col",
@@ -348,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const filterAndDisplayStudents = (selectedProgram, selectedLevel) => {
-    let filteredStudents = students;
+    let filteredStudents = studentData;
 
     if (selectedProgram !== "ALL") {
       filteredStudents = filteredStudents.filter(
@@ -364,6 +166,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     displayStudents(filteredStudents);
   };
-
-  filterAndDisplayStudents("ALL", "ALL");
 });

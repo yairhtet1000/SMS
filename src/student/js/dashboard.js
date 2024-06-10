@@ -6,7 +6,7 @@ window.addEventListener("load", () => {
   name_bar.classList.remove("ms-[-600px]");
   name_bar.classList.add("ms-0");
   name_bar_r.classList.add("right-[-300px]");
-  name_bar_r.classList.remove("right-0");
+  name_bar_r.classList.remove("right-[-0.5px]");
 });
 
 window.addEventListener("scroll", () => {
@@ -60,7 +60,7 @@ for (let i = 0; i < classRecordings.length; i++) {
     <div class="card w-[225px] flex flex-col items-center overflow-hidden rounded-md select-none cursor-pointer ">
         <img class="select-none w-full h-[100px] object-cover object-center" src="${classRec.image}" draggable="false"/>
         <div class="w-full p-3 h-[100px] bg-gradient-to-b from-[#0C56C1] from-30% to-[#173358]  text-white flex items-center justify-center" >
-            <h1>${classRec.title}</h1>
+            <h2>${classRec.title}</h2>
         </div>
     </div>
     `;
@@ -91,16 +91,16 @@ for (let i = 0; i < courseMaterials.length; i++) {
   const course = courseMaterials[i];
 
   course_material.innerHTML += `
-          <div class="flex flex-col rounded-lg overflow-hidden relative text-white shadow-lg" >
+        <div class="flex flex-col rounded-lg overflow-hidden relative text-white shadow-lg" >
           <img class="w-14 h-14 rounded-full absolute translate-x-[-50%] translate-y-[-50%] left-8 top-[50%]" src="${course.image}" />
           <div class="bg-gradient-to-b from-[#173358] to-[#0C56C1] p-5">
-            <h1 class="text-end text-[11px]">${course.title}</h1>
+            <h2 class="text-end text-[11px]">${course.title}</h2>
           </div>
           <div class="p-5">
-            <p class="text-end text-black">21 files</p>
+            <span class="text-end text-black">21 files</span>
           </div>
         </div>
-    `;
+        `;
 }
 
 const ctx = document.getElementById("myChart");
