@@ -4,25 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
+
     <script
       src="https://kit.fontawesome.com/47fb921f6f.js"
       crossorigin="anonymous"
     ></script>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <title>Dashboard</title>
   </head>
   <body>
-    <div>
+    <div class="flex">
       <div class="w-[15%] h-[100vh] pe-5 left-0 fixed">
         <div class="bg-[#173358] h-full">
           <div
-            class="h-[100%] py-5 text-white flex items-center justify-between flex-col"
+            class="h-full py-5 text-[#f1f1f1] flex flex-col items-center justify-between"
           >
             <img
               class="w-24"
               src="../../public/images/school-logo.png"
               alt=""
             />
+
             <nav class="flex flex-col leading-8">
               <a class="" href="./dashboard.html"
                 ><i class="fa-solid fa-house"></i> Dashboard</a
@@ -37,105 +41,102 @@
         </div>
       </div>
 
-      <div class="w-[15%] h-[100vh] ps-5 fixed right-0">
-        <div
-          class="bg-[#173358] my-3 p-5 flex flex-col items-center rounded-s-lg"
-          id="name-bar-right"
-        >
-          <img
-            class="size-24 my-2 mx-auto rounded-full"
-            src="../../public/images/temp-profile.jpg"
-            alt=""
-          />
-          <span class="text-[#f1f1f1]">Yair Htet</span>
-          <span class="text-[#f1f1f1]">NCC level 4</span>
+      <div class="w-[15%] h-[100vh] ps-5 fixed right-0 flex flex-col">
+        <div class="w-full relative">
+          <div
+            class="transition-all duration-700 ease-in-out w-full my-3 p-5 bg-[#173358] absolute rounded-s-lg text-center text-[#f1f1f1]"
+            id="name-bar-right"
+          >
+            <img
+              class="size-24 my-2 mx-auto rounded-full"
+              src="../../public/images/temp-profile.jpg"
+              alt="Profile"
+            />
+            <span>Sandar Nwe</span>
+            <span>Academic Team</span>
+          </div>
         </div>
       </div>
 
-      <!-- main body but full width -->
       <main class="w-full">
-        <!-- main body with code width -->
         <div class="w-[70%] mx-auto">
-          <!-- Start Here -->
-
-
           <div class="h-44 overflow-auto">
-            <div class="name-bar bar-top" id="name-bar">
+            <div class="name-bar bar-top flex items-center" id="name-bar">
               <img
-                class="w-20 rounded-full mb-4"
+                class="size-28 rounded-full"
                 src="../../public/images/temp-profile.jpg"
-                alt=""
+                alt="Admin Profile"
               />
-              <div class="ms-3 text-[#f1f1f1]">
-                <h1>ADMIN</h1>
-                <p>Academic Team</p>
+              <div class="mx-3 flex flex-col justify-center text-[#f1f1f1]">
+                <span>Sandar Nwe</span>
+                <span>Academic Team</span>
               </div>
             </div>
           </div>
 
-          <div class="flex space-x-4 mb-4">
+          <div class="flex justify-between my-3">
             <div
-              class="w-[30%] h-40 bg-[#E1EFF6] rounded-lg shadow-md flex items-center space-x-4 cursor-pointer"
+              class="w-[32%] h-40 bg-[#E1EFF6] rounded-lg shadow-md flex items-center space-x-4 cursor-pointer"
             >
               <img
-                class="size-[6rem] rounded-full ml-4 mr-6 object-cover object-center"
-                src="../../public/images/NgweJin.jpg"
-                alt=""
+                class="size-24 rounded-full ml-4 mr-6 object-cover object-center"
+                src="../../public/images/Class-icon.jpg"
+                alt="Classes Icon"
               />
-              <div class="space-x-14 font-semibold">
+              <div class="font-semibold">
                 <h1 class="text-2xl">Total Classes</h1>
-                <br />
                 <h1 class="text-xl">21</h1>
               </div>
             </div>
 
             <div
-              class="w-[30%] h-40 bg-[#E1EFF6] rounded-lg shadow-md flex items-center space-x-4 cursor-pointer"
+              class="w-[32%] h-40 bg-[#E1EFF6] rounded-lg shadow-md flex items-center space-x-4 cursor-pointer"
             >
               <img
-                class="size-[6rem] rounded-full ml-4 mr-6 object-cover object-center"
-                src="../../public/images/NgweJin.jpg"
-                alt=""
+                class="size-24 rounded-full ml-4 mr-6 object-cover object-center"
+                src="../../public/images/Student-icon.jpg"
+                alt="Students Icon"
               />
-              <div class="space-x-14 font-semibold">
+              <div class="font-semibold">
                 <h1 class="text-2xl">Total Students</h1>
-                <br />
                 <h1 class="text-xl">360</h1>
               </div>
             </div>
 
             <div
-              class="w-[30%] h-40 bg-[#E1EFF6] rounded-lg shadow-md flex items-center space-x-4 cursor-pointer"
+              class="w-[32%] h-40 bg-[#E1EFF6] rounded-lg shadow-md flex items-center space-x-4 cursor-pointer"
             >
               <img
-                class="size-[6rem] rounded-full ml-4 mr-6 object-cover object-center"
-                src="../../public/images/NgweJin.jpg"
-                alt=""
+                class="size-24 rounded-full ml-4 mr-6 object-cover object-center"
+                src="../../public/images/teacher-icon.jpg"
+                alt="Teachers Icon"
               />
-              <div class="space-x-14 font-semibold">
+              <div class="font-semibold">
                 <h1 class="text-2xl">Total Teachers</h1>
-                <br />
-                <h1 class="text-xl">1050</h1>
+                <h1 class="text-xl">25</h1>
               </div>
             </div>
           </div>
 
-          <div class="flex justify-between">
+          <div class="flex justify-between my-3">
             <div class="pg-left w-[57%] flex flex-col justify-between">
-              <div class="pg-top w-full p-3 rounded-md shadow-md h-[39%]">
+              <div
+                class="pg-top w-full bg-[#E1EFF6] p-3 rounded-md shadow-md h-[39%]"
+              >
                 <div class="flex justify-between">
                   <h2 class="font-semibold">Student Information</h2>
                   <button class="px-2 py-1 bg-[#023E8A] rounded-md text-white">
                     View All
                   </button>
                 </div>
-                <div class="mt-3" id="student-informations">
-                  <!-- javascript -->
+                <div class="mt-3" id="student-information">
+                  <!-- JavaScript iterate students -->
                 </div>
               </div>
-              <div class="chart h-[59%] p-10 rounded-md shadow-md">
+
+              <div class="chart h-[59%] p-10 bg-[#E1EFF6] rounded-md shadow-md">
                 <div class="flex justify-between">
-                  <h2 class="font-semibold">Student Information</h2>
+                  <h2 class="font-semibold">Attendance Report</h2>
                   <button class="px-2 py-1 bg-[#023E8A] rounded-md text-white">
                     View All
                   </button>
@@ -148,83 +149,92 @@
             </div>
 
             <div class="right w-[40%] flex flex-col justify-between">
-              <div class="w-[full] rounded-lg shadow-md h-[58%]">
+              <div class="w-full bg-[#E1EFF6] rounded-lg shadow-md h-[58%]">
                 <div class="w-full flex p-3 justify-between">
-                  <h2 class="font-semibold">Teacher Informations</h2>
-                  <span class="bg-[#023E8A] px-5 rounded-lg text-white"
+                  <h2 class="font-semibold">Teacher Information</h2>
+                  <span
+                    class="bg-[#023E8A] px-5 rounded-lg text-white cursor-pointer"
                     >View All</span
                   >
                 </div>
-                <!-- teachers -->
-                <div class="w-full px-3 py-3">
+
+                <div class="w-full p-3" id="teacher-information">
                   <div
                     class="w-full py-3 flex items-center justify-around border-b border-gray-900"
                   >
-                    <div
+                    <img
+                      src=""
+                      alt=""
                       class="size-16 rounded-full bg-[#D9D9D9] shadow-md"
-                    ></div>
-
-                    <h2 class="font-bold">Dr.Myat Mon Aye</h2>
+                    />
+                    <span class="font-bold">Dr. Myat Mon Aye</span>
                   </div>
+
                   <div
                     class="w-full py-3 flex items-center justify-around border-b border-gray-900"
                   >
-                    <div
+                    <img
+                      src=""
+                      alt=""
                       class="size-16 rounded-full bg-[#D9D9D9] shadow-md"
-                    ></div>
-
-                    <h2 class="font-bold">Dr.Myat Mon Aye</h2>
+                    />
+                    <span class="font-bold">Dr. Ei Ei Khin</span>
                   </div>
+
                   <div
                     class="w-full py-3 flex items-center justify-around border-b border-gray-900"
                   >
-                    <div
+                    <img
+                      src=""
+                      alt=""
                       class="size-16 rounded-full bg-[#D9D9D9] shadow-md"
-                    ></div>
-
-                    <h2 class="font-bold">Dr.Myat Mon Aye</h2>
+                    />
+                    <span class="font-bold">Dr. Aye Aye</span>
                   </div>
+
                   <div
                     class="w-full py-3 flex items-center justify-around border-b border-gray-900"
                   >
-                    <div
+                    <img
+                      src=""
+                      alt=""
                       class="size-16 rounded-full bg-[#D9D9D9] shadow-md"
-                    ></div>
-
-                    <h2 class="font-bold">Dr.Myat Mon Aye</h2>
+                    />
+                    <span class="font-bold">Dr. San San Maw</span>
                   </div>
+
                   <div class="w-full py-3 flex items-center justify-around">
-                    <div
+                    <img
+                      src=""
+                      alt=""
                       class="size-16 rounded-full bg-[#D9D9D9] shadow-md"
-                    ></div>
-
-                    <h2 class="font-bold">Dr.Myat Mon Aye</h2>
+                    />
+                    <span class="font-bold">Dr. Zin Thandar</span>
                   </div>
                 </div>
               </div>
 
-              <div class="rounded-md shadow-md p-3 h-[40%]">
+              <div class="bg-[#E1EFF6] rounded-md shadow-md p-3 h-[40%]">
                 <div class="flex w-full justify-between">
                   <h2 class="font-semibold">News & Activities</h2>
                   <button class="px-2 py-1 bg-[#023E8A] rounded-md text-white">
                     View All
                   </button>
                 </div>
-
-                <div class="" id="events">
-                  <!-- javascript session -->
+                <div id="events">
+                  <!-- JavaScript iterate events -->
                 </div>
               </div>
             </div>
-
           </div>
-        <div class="w-full my-3 p-3 bg-[#E1EFF6] rounded-xl">
+
+          <div class="w-full my-3 p-3 bg-[#E1EFF6] rounded-xl">
             <div class="flex justify-between">
               <span class="py-2 font-bold text-lg rounded-xl"
-                >Today Time-table</span
+                >Today Timetable</span
               >
               <span
-                class="px-6 py-2 font-bold bg-[#023E8A] text-[#f1f1f1] rounded-xl"
+                class="px-6 py-2 font-bold bg-[#023E8A] text-[#f1f1f1] rounded-xl cursor-pointer"
                 >View All</span
               >
             </div>
@@ -368,10 +378,11 @@
                 >Payment Information</span
               >
               <span
-                class="px-6 py-2 font-bold bg-[#023E8A] text-[#f1f1f1] rounded-xl"
+                class="px-6 py-2 font-bold bg-[#023E8A] text-[#f1f1f1] rounded-xl cursor-pointer"
                 >View All</span
               >
             </div>
+
             <table
               class="w-full table-fixed border-separate border-spacing-2 text-center"
             >
@@ -384,9 +395,11 @@
                   <th class="w-[15%]">Status</th>
                 </tr>
               </thead>
-
-              <tbody id="table-body"></tbody>
+              <tbody id="table-body">
+                <!-- JavaScript iterate table -->
+              </tbody>
             </table>
+          </div>
         </div>
       </main>
     </div>
