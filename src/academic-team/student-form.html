@@ -10,7 +10,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <title>Student Information</title>
+    <title>Student Form</title>
   </head>
   <body>
     <div>
@@ -30,7 +30,7 @@
                 ><i class="fa-solid fa-house"></i> Dashboard</a
               >
               <a class="" href="./student-info.html"
-                ><i class="fa-solid fa-tv"></i> Student Information</a
+                ><i class="fa-solid fa-circle-info"></i> Student Information</a
               >
               <a class="" href="./course-material.html"
                 ><i class="fa-solid fa-book"></i> Course Material</a
@@ -64,48 +64,11 @@
       <main class="w-full">
         <!-- main body with container width -->
         <div class="w-[70%] mx-auto p-3">
-          <h2
-            class="inline-block font-bold text-2xl m-3 px-16 py-5 rounded-xl bg-[#173358] text-[#f1f1f1]"
-          >
-            Student Information
-          </h2>
-
-          <div class="flex justify-around my-3 font-bold">
-            <div class="">
-              <label for="program">Select Program: </label>
-              <select name="Program" id="program">
-                <option value="ALL">All</option>
-                <option value="NCC">NCC</option>
-                <option value="ABE">ABE</option>
-                <option value="IGCSE">IGCSE</option>
-                <option value="GED">GED</option>
-              </select>
-            </div>
-
-            <div class="">
-              <label for="label">Select Level: </label>
-              <select name="Level" id="level">
-                <option value="ALL">All</option>
-                <option value="3">Level-3</option>
-                <option value="4">Level-4</option>
-                <option value="5">Level-5</option>
-              </select>
-            </div>
-
-            <div class="">
-              <span id="list-view"><i class="fa-solid fa-list"></i></span>
-              <span id="grid-view"><i class="fa-brands fa-microsoft"></i></span>
-            </div>
-          </div>
-
-          <div
-            class="w-full flex justify-start flex-wrap"
-            id="student-info-container"
-          ></div>
+          <!-- start your code here -->
         </div>
       </main>
     </div>
 
-    <script src="./js/student-info.js"></script>
+    <script src="./js/student-form.js"></script>
   </body>
 </html>
