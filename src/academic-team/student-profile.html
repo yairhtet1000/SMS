@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/47fb921f6f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Yae Wint Aung</title>
+  </head>
+  <body>
+    <div>
+      <div class="w-[15%] h-[100vh] pe-5 left-0 fixed">
+        <div class="bg-[#173358] h-full">
+          <div
+            class="h-full py-5 text-[#f1f1f1] flex flex-col items-center justify-between"
+          >
+            <img
+              class="w-24"
+              src="../../public/images/school-logo.png"
+              alt=""
+            />
+
+            <nav class="flex flex-col leading-8">
+              <a class="" href="./dashboard.html"
+                ><i class="fa-solid fa-house"></i> Dashboard</a
+              >
+              <a class="" href="./student-info.html"
+                ><i class="fa-solid fa-tv"></i> Student Information</a
+              >
+            </nav>
+
+            <button class="logout p-3">Logout</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-[15%] h-[100vh] ps-5 fixed right-0">
+        <div
+          class="bg-[#173358] my-3 p-5 flex flex-col items-center rounded-s-lg"
+          id="name-bar-right"
+        >
+          <img
+            class="size-24 my-2 mx-auto rounded-full"
+            src="../../public/images/temp-profile.jpg"
+            alt=""
+          />
+          <span class="text-[#f1f1f1]">Yair Htet</span>
+          <span class="text-[#f1f1f1]">NCC level 4</span>
+        </div>
+      </div>
+
+      <!-- main body but full width -->
+      <main class="w-full">
+        <!-- main body with container width -->
+        <div class="w-[70%] mx-auto p-3">
+          <!-- start here -->
+          <div class="flex justify-between">
+            <div
+              class="w-[59%] flex bg-[#173358] p-6 rounded-md shadow-sm justify-evenly items-center"
+            >
+              <img
+                class="w-[30%] rounded-full"
+                src="../../public/images/temp-profile.jpg"
+                alt=""
+              />
+              <div class="ms-4 text-white">
+                <h2 class="text-3xl">Yae Wint Aung</h2>
+                <span class="">NCC Level 4</span>
+              </div>
+            </div>
+            <div
+              class="w-[40%] rounded-md shadow-md bg-[#E1EFF6] flex items-center justify-between p-3"
+            >
+              <div class="flex flex-col justify-between h-full W-[50%] py-5">
+                <h3>Student ID:</h3>
+                <h3>Phone Number:</h3>
+                <h3>Email:</h3>
+                <h3>Address:</h3>
+              </div>
+
+              <div class="flex flex-col justify-between h-full w-[50%] py-5">
+                <h3>NNU12345</h3>
+                <h3 class="">09798798789</h3>
+                <h3>nnustudent@gmail.com</h3>
+                <span class="text-start flex">
+                  88B, between 23A & 23B Aungmyaythazan
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-between mt-5">
+            <div class="w-[40%] rounded-md shadow-md p-3 bg-[#E1EFF6]">
+              <div class="w-full flex justify-between p-2">
+                <h2 class="font-semibold text-xl">Overall Attendance</h2>
+                <button class="bg-[#023E8A] p-1 text-white rounded-md">
+                  View All
+                </button>
+              </div>
+              <div>
+                <canvas class="h-[350px]" id="attendance-chart"></canvas>
+              </div>
+            </div>
+            <div class="w-[59%] shadow-md rounded-md p-3 bg-[#E1EFF6]">
+              <h2 class="text-2xl font-semibold">Yae Wint Aung’s Attendance</h2>
+              <table
+                class="w-full table-fixed border-separate border-spacing-2 text-center mt-3 border"
+              >
+                <thead>
+                  <tr class="text-lg">
+                    <th class="w-[15%]">Class Name</th>
+                    <th class="w-[25%]">Date</th>
+                    <th class="w-[20%]">Status</th>
+                    <th class="w-[25%]">Edit</th>
+                  </tr>
+                </thead>
+                <tbody id="table-body">
+                  <tr>
+                    <td>OOSAD</td>
+                    <td>11/6/2024 - 1:00PM</td>
+                    <td class="py-2 cursor-pointer">
+                      <span class="bg-[#3DC84B] select-none px-2 rounded-md"
+                        >Present</span
+                      >
+                    </td>
+                    <td>Edit</td>
+                  </tr>
+                  <tr>
+                    <td>AMCC</td>
+                    <td>11/6/2024 - 3:00PM</td>
+                    <td class="py-2 cursor-pointer">
+                      <span class="bg-[#DA3C3C] select-none px-2 rounded-md"
+                        >Absent</span
+                      >
+                    </td>
+                    <td>Edit</td>
+                  </tr>
+                  <tr>
+                    <td>CS</td>
+                    <td>11/6/2024 - 3:00PM</td>
+                    <td class="py-2 cursor-pointer">
+                      <span class="bg-[#3DC84B] select-none px-2 rounded-md"
+                        >Present</span
+                      >
+                    </td>
+                    <td>Edit</td>
+                  </tr>
+                  <tr>
+                    <td>CN</td>
+                    <td>12/6/2024 - 10:00AM</td>
+                    <td class="py-2 cursor-pointer">
+                      <span class="bg-[#3DC84B] select-none px-2 rounded-md"
+                        >Present</span
+                      >
+                    </td>
+                    <td>Edit</td>
+                  </tr>
+                  <tr>
+                    <td>CS</td>
+                    <td>12/6/2024 - 11:30AM</td>
+                    <td class="py-2 cursor-pointer">
+                      <span class="bg-[#3DC84B] select-none px-2 rounded-md"
+                        >Present</span
+                      >
+                    </td>
+                    <td>Edit</td>
+                  </tr>
+                  <tr>
+                    <td>IT Team</td>
+                    <td>3/6/2024 - 3:00PM</td>
+                    <td class="py-2 cursor-pointer">
+                      <span class="bg-[#DA3C3C] select-none px-2 rounded-md"
+                        >Absent</span
+                      >
+                    </td>
+                    <td>Edit</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="w-full shadow-md rounded-md p-5 mt-5 bg-[#E1EFF6]">
+            <h2 class="text-2xl font-semibold">
+              Yae Wint Aung’s Grade progress
+            </h2>
+            <table
+              class="w-full table-fixed border-separate border-spacing-2 text-center mt-3 border"
+            >
+              <thead>
+                <tr class="text-lg">
+                  <th class="w-[15%]">Subject</th>
+                  <th class="w-[15%]">Grades</th>
+                  <th class="w-[25%]">Details</th>
+                  <th class="w-[20%]">Status</th>
+                  <th class="w-[25%]">Action</th>
+                </tr>
+              </thead>
+              <tbody id="table-body">
+                <tr>
+                  <td>OOSAD</td>
+                  <td>100/100</td>
+                  <td>Distinction</td>
+                  <td class="py-3 cursor-pointer h-[1px]">
+                    <div
+                      class="bg-[#3DC84B] select-none p-2 w-[100%] rounded-md"
+                    ></div>
+                  </td>
+                  <td>Edit</td>
+                </tr>
+                <tr>
+                  <td>AMCC</td>
+                  <td>70/100</td>
+                  <td>Merit</td>
+                  <td class="py-3 cursor-pointer">
+                    <div
+                      class="bg-[#3DC84B] select-none p-2 w-[100%] rounded-md"
+                    ></div>
+                  </td>
+                  <td>Edit</td>
+                </tr>
+                <tr>
+                  <td>CS</td>
+                  <td>80/100</td>
+                  <td>Distinction</td>
+                  <td class="py-3 cursor-pointer">
+                    <div
+                      class="bg-[#3DC84B] select-none p-2 w-[100%] rounded-md"
+                    ></div>
+                  </td>
+                  <td>Edit</td>
+                </tr>
+                <tr>
+                  <td>CN</td>
+                  <td>70/100</td>
+                  <td>Merit</td>
+                  <td class="py-3 cursor-pointer">
+                    <div
+                      class="bg-[#3DC84B] select-none p-2 w-[100%] rounded-md"
+                    ></div>
+                  </td>
+                  <td>Edit</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./js/student_profile.js"></script>
+  </body>
+</html>
