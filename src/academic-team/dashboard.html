@@ -15,7 +15,7 @@
     <title>Dashboard</title>
   </head>
   <body>
-    <div class="flex">
+    <div>
       <div class="w-[15%] h-[100vh] pe-5 left-0 fixed">
         <div class="bg-[#173358] h-full">
           <div
@@ -32,13 +32,16 @@
                 ><i class="fa-solid fa-house"></i> Dashboard</a
               >
               <a class="" href="./student-info.html"
-                ><i class="fa-solid fa-tv"></i> Student Information</a
+                ><i class="fa-solid fa-circle-info"></i> Student Information</a
               >
               <a class="" href="./course-material.html"
                 ><i class="fa-solid fa-book"></i> Course Material</a
               >
               <a class="" href="./student-form.html"
                 ><i class="fa-solid fa-file-pen"></i> Student Form</a
+              >
+              <a class="" href="./attendance.html"
+                ><i class="fa-solid fa-clipboard-user"></i> Attendance</a
               >
             </nav>
 
@@ -64,8 +67,11 @@
         </div>
       </div>
 
+      <!-- main body but full width -->
       <main class="w-full">
+        <!-- main body with container width -->
         <div class="w-[70%] mx-auto">
+          <!-- start here -->
           <div class="h-44 overflow-auto">
             <div class="name-bar bar-top flex items-center" id="name-bar">
               <img
@@ -81,7 +87,8 @@
           </div>
 
           <div class="flex justify-between my-3">
-            <div
+            <a
+              href="./total-class.html"
               class="w-[32%] h-40 bg-[#E1EFF6] rounded-lg shadow-md flex items-center space-x-4 cursor-pointer"
             >
               <img
@@ -93,7 +100,7 @@
                 <h1 class="text-2xl">Total Classes</h1>
                 <h1 class="text-xl">21</h1>
               </div>
-            </div>
+            </a>
 
             <div
               class="w-[32%] h-40 bg-[#E1EFF6] rounded-lg shadow-md flex items-center space-x-4 cursor-pointer"

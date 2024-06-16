@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/47fb921f6f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div class="w-[15%] h-[100vh] pe-5 left-0 fixed">
+        <div class="bg-[#173358] h-full">
+          <div
+            class="h-full py-5 text-[#f1f1f1] flex flex-col items-center justify-between"
+          >
+            <img
+              class="w-24"
+              src="../../public/images/school-logo.png"
+              alt=""
+            />
+
+            <nav class="flex flex-col leading-8">
+              <a class="" href="./dashboard.html"
+                ><i class="fa-solid fa-house"></i> Dashboard</a
+              >
+              <a class="" href="./student-info.html"
+                ><i class="fa-solid fa-circle-info"></i> Student Information</a
+              >
+              <a class="" href="./course-material.html"
+                ><i class="fa-solid fa-book"></i> Course Material</a
+              >
+              <a class="" href="./student-form.html"
+                ><i class="fa-solid fa-file-pen"></i> Student Form</a
+              >
+              <a class="" href="./attendance.html"
+                ><i class="fa-solid fa-clipboard-user"></i> Attendance</a
+              >
+            </nav>
+
+            <button class="logout p-3">Logout</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-[15%] h-[100vh] ps-5 fixed right-0">
+        <div
+          class="bg-[#173358] my-3 p-5 flex flex-col items-center rounded-s-lg"
+          id="name-bar-right"
+        >
+          <img
+            class="size-24 my-2 mx-auto rounded-full"
+            src="../../public/images/temp-profile.jpg"
+            alt=""
+          />
+          <span class="text-[#f1f1f1]">Yair Htet</span>
+          <span class="text-[#f1f1f1]">NCC level 4</span>
+        </div>
+      </div>
+
+      <!-- main body but full width -->
+      <main class="w-full">
+        <!-- main body with container width -->
+        <div class="w-[70%] mx-auto p-3">
+          <!-- start here -->
+          <h2
+            class="inline-block font-bold text-2xl my-3 px-16 py-5 rounded-xl bg-[#173358] text-[#f1f1f1]"
+          >
+            Attendance Table
+          </h2>
+
+          <div class="bg-[#E1EFF6]">
+            <div class="w-full p-3 flex justify-around">
+              <div class="bg-[#173358] p-1 text-[#f1f1f1] rounded-md">
+                <input type="radio" name="class" id="ncc" class="hidden" />
+                <label for="ncc">
+                  NCC Level:
+                  <select
+                    name="NCC Level"
+                    id="ncc-level"
+                    class="bg-transparent"
+                  >
+                    <option value="6" class="bg-[#173358]">6</option>
+                    <option value="5" class="bg-[#173358]">5</option>
+                    <option value="4" class="bg-[#173358]">4</option>
+                    <option value="3" class="bg-[#173358]">3</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="bg-[#0D8989] p-1 text-[#f1f1f1] rounded-md">
+                <input type="radio" name="class" id="abe" class="hidden" />
+                <label for="abe">
+                  ABE Level:
+                  <select
+                    name="ABE Level"
+                    id="abe-level"
+                    class="bg-transparent"
+                  >
+                    <option value="6" class="bg-[#0D8989]">6</option>
+                    <option value="5" class="bg-[#0D8989]">5</option>
+                    <option value="4" class="bg-[#0D8989]">4</option>
+                    <option value="3" class="bg-[#0D8989]">3</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="bg-[#FF8A00] p-1 text-[#111] rounded-md">
+                <input type="radio" name="class" id="igcse" class="hidden" />
+                <label for="igcse">IGCSE</label>
+              </div>
+
+              <div class="bg-[#FF8A00] p-1 text-[#111] rounded-md">
+                <input type="radio" name="class" id="ged" class="hidden" />
+                <label for="ged">GED</label>
+              </div>
+            </div>
+
+            <table
+              class="w-full table-auto border-separate border-spacing-y-1 text-center"
+            >
+              <thead>
+                <tr class="h-14 bg-[#97d2fb] rounded-md">
+                  <th>Image</th>
+                  <th>Name</th>
+                  <th>Date</th>
+                  <th>Subject</th>
+                  <th class="">Check</th>
+                </tr>
+              </thead>
+
+              <tbody id="attendance-table">
+                <!-- <tr class="bg-[#97d2fb]">
+                  <td>
+                    <img src="" alt="" class="size-10 m-auto rounded-full" />
+                  </td>
+                  <td>Min Hein Htut</td>
+                  <td>OOSAD</td>
+                  <td>11/6/2024 - 1:00 PM</td>
+                  <td class="flex justify-around items-center h-12">
+                    <input
+                      type="radio"
+                      name="attendance"
+                      value="present"
+                      id="present-btn"
+                      class="hidden"
+                    />
+                    <label
+                      for="present-btn"
+                      class="bg-[#3DC84B] px-2 py1 rounded-md"
+                      >Present</label
+                    >
+
+                    <input
+                      type="radio"
+                      name="attendance"
+                      value="absent"
+                      id="absent-btn"
+                      class="hidden"
+                    />
+                    <label
+                      for="absent-btn"
+                      class="bg-[#DA3C3C] px-2 py1 rounded-md"
+                      >Absent</label
+                    >
+                  </td>
+                </tr>
+
+                <tr class="bg-[#97d2fb]">
+                  <td>
+                    <img src="" alt="" class="size-10 m-auto rounded-full" />
+                  </td>
+                  <td>Min Hein Htut</td>
+                  <td>OOSAD</td>
+                  <td>11/6/2024 - 1:00 PM</td>
+                  <td class="m-auto flex justify-around items-center h-12">
+                    <input
+                      type="radio"
+                      name="attendance"
+                      id="present-btn"
+                      class="hidden"
+                    />
+                    <label
+                      for="present-btn"
+                      class="bg-[#3DC84B] px-2 py1 rounded-md"
+                      >Present</label
+                    >
+
+                    <input
+                      type="radio"
+                      name="attendance"
+                      id="absent-btn"
+                      class="hidden"
+                    />
+                    <label
+                      for="absent-btn"
+                      class="bg-[#DA3C3C] px-2 py1 rounded-md"
+                      >Absent</label
+                    >
+                  </td>
+                </tr> -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./js/attendance.js"></script>
+  </body>
+</html>
