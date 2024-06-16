@@ -65,10 +65,538 @@
         <!-- main body with container width -->
         <div class="w-[70%] mx-auto p-3">
           <!-- start your code here -->
+          <div class="flex w-full justify-center py-5">
+            <div class="flex w-[550px] justify-between">
+              <img
+                src="../../public/images/NNA logo.png"
+                alt=""
+                class="size-48 h-full"
+              />
+              <img
+                src="../../public/images/NNU logo.png"
+                alt=""
+                class="size-64 h-full"
+              />
+            </div>
+          </div>
+
+          <div class="w-ful flex justify-center">
+            <form
+              action=""
+              class="px-14 w-[85%] bg-slate-50 shadow-sm shadow-black py-5"
+            >
+              <h2 class="text-center text-3xl font-semibold mt-7">
+                Registeration Form
+              </h2>
+
+              <!-- <div class="mt-8">
+                <label for="date">Date :</label>
+                <input
+                  type="text"
+                  id="date"
+                  name="date"
+                  class="w-[200px] border-b-black border-b-2 border-dotted"
+                />
+              </div>
+
+              <div class="mt-8">
+                <h3 class="mb-6 text-2xl uppercase">Personal Information</h3>
+                <div class="flex flex-col space-y-8">
+                  <div class="flex justify-between">
+                    <label for="name" class="text-lg">Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      class="w-[200px] border-b-black border-b-2 border-dotted"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <label for="birth" class="text-lg">Date of Birth</label>
+                    <input
+                      type="text"
+                      id="birth"
+                      name="birth"
+                      class="border-b-2 w-[200px] border-dotted border-b-black"
+                    />
+                  </div>
+
+                  <div class="flex justify-between">
+                    <label for="address" class="text-lg">Address</label>
+                    <input
+                      type="text"
+                      id="address"
+                      name="address"
+                      class="border-b-2 w-[200px] border-dotted border-b-black"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <label for="ph" class="text-lg">Phone Number</label>
+                    <input
+                      type="text"
+                      id="ph"
+                      name="ph"
+                      class="border-b-2 w-[200px] border-dotted border-b-black"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8 space-y-8">
+                <h3 class="mb-6 text-2xl uppercase">Guardian Details</h3>
+                <div class="flex justify-between">
+                  <label for="name2" class="text-lg">Name</label>
+                  <input
+                    type="text"
+                    id="name2"
+                    name="name2"
+                    class="w-[200px] border-b-black border-b-2 border-dotted"
+                  />
+                </div>
+                <div class="flex justify-between">
+                  <h3 class="text-lg">Relationship with Student</h3>
+                  <div class="w-[200px] flex flex-col">
+                    <div>
+                      <input type="checkbox" id="father" name="father" />
+                      <label for="father">Father</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="mother" name="mother" />
+                      <label for="mother">Mother</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="sibling" name="sibling" />
+                      <label for="sibling">Sibling</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="guardian" name="guardian" />
+                      <label for="guardian">Guardian</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-between">
+                  <label for="ph2" class="text-lg">Phone Number</label>
+                  <input
+                    type="text"
+                    id="ph2"
+                    name="ph2"
+                    class="border-b-2 w-[200px] border-dotted border-b-black"
+                  />
+                </div>
+                <div class="flex justify-between">
+                  <label for="address2" class="text-lg">Address</label>
+                  <input
+                    type="text"
+                    id="address2"
+                    name="address2"
+                    class="border-b-2 w-[200px] border-dotted border-b-black"
+                  />
+                </div>
+              </div>
+
+              <div class="mt-8 space-y-8">
+                <h3 class="mb-6 text-2xl uppercase">Academic Information</h3>
+                <div class="flex justify-between">
+                  <label for="ac-background" class="text-lg"
+                    >Academic Background</label
+                  >
+                  <input
+                    type="text"
+                    id="ac-background"
+                    name="ac-background"
+                    class="w-[200px] border-b-black border-b-2 border-dotted"
+                  />
+                </div>
+              </div>
+
+              <div class="mt-8 space-y-8">
+                <div class="flex justify-between">
+                  <h3 class="text-2xl">Programme Applying For</h3>
+                  <div class="flex w-[200px] justify-between">
+                    <div class="flex flex-col">
+                      <div>
+                        <input type="checkbox" id="pGed" name="pGed" />
+                        <label for="pGed">Pre-GED</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="ged" name="ged" />
+                        <label for="ged">Ged</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="pIG" name="pIG" />
+                        <label for="pIG">Pre-IGCSE</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="ig" name="ig" />
+                        <label for="ig">IGCSE</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="fou" name="fou" />
+                        <label for="fou">Foundation <br>(Level-3)  </label>
+                      </div>
+                    </div>
+                    <div>
+                      <div>
+                        <input type="checkbox" id="abe" name="abe" />
+                        <label for="abe">ABE</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="ncc" name="ncc" />
+                        <label for="ncc">NCC</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+
+              <div class="flex justify-between mt-8">
+                  <label for="name" class="text-lg">Tentative Exam Date</label>
+                    <input
+                      type="text"
+                      id="tDate"
+                      name="tDate"
+                      class="w-[200px] border-b-black border-b-2 border-dotted"
+                    />
+              </div>
+              <div class="flex justify-between mt-8">
+                  <h3 class="text-lg">Type Of Class</h3>
+                  <div class="w-[200px] flex flex-col">
+                    <div>
+                      <input type="checkbox" id="campus" name="campus" />
+                      <label for="campus">On-Campus</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="online" name="online" />
+                      <label for="online">Online</label>
+                    </div>
+                </div>
+              </div>
+              <div class="mt-8 space-y-8">
+                <h3
+                  class="mb-6 text-2xl uppercase underline underline-offset-2"
+                >
+                  For Student who enroll for IGCSE courses
+                </h3>
+                <div class="flex justify-between mt-8">
+                  <h3 class="text-lg">Assessment Bodies (For IGCSE)</h3>
+                  <div class="w-[200px] flex flex-col">
+                    <div>
+                      <input type="checkbox" id="cambridge" name="cambridge" />
+                      <label for="cambridge">Cambridge</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="pearson" name="pearson" />
+                      <label for="pearson">Pearson</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8">
+                <h3 class="mb-6 text-2xl uppercase">
+                  Please Mention your chosen subjects.
+                </h3>
+                <div class="flex justify-between mb-8">
+                  <label for="ms" class="text-lg font-bold">MainStream</label>
+                  <input
+                    type="text"
+                    id="ms"
+                    name="ms"
+                    class="w-[200px] border-b-black border-b-2 border-dotted"
+                  />
+                </div>
+                <div class="flex flex-col space-y-4">
+                  <div class="flex justify-between">
+                    <label for="s1" class="text-lg">Subject 1</label>
+                    <input
+                      type="text"
+                      id="s1"
+                      name="s1"
+                      class="w-[200px] border-b-black border-b-2 border-dotted"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <label for="s2" class="text-lg">Subject 2</label>
+                    <input
+                      type="text"
+                      id="s2"
+                      name="s2"
+                      class="border-b-2 w-[200px] border-b-black border-dotted"
+                    />
+                  </div>
+
+                  <div class="flex justify-between">
+                    <label for="s3" class="text-lg">Subject 3</label>
+                    <input
+                      type="text"
+                      id="s3"
+                      name="s3"
+                      class="border-b-2 w-[200px] border-b-black border-dotted"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <label for="s4" class="text-lg">Subject 4</label>
+                    <input
+                      type="text"
+                      id="s4"
+                      name="s4"
+                      class="border-b-2 w-[200px] border-b-black border-dotted"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <label for="s5" class="text-lg">Subject 5</label>
+                    <input
+                      type="text"
+                      id="s5"
+                      name="s5"
+                      class="border-b-2 w-[200px] border-b-black border-dotted"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <label for="s6" class="text-lg">Subject 6</label>
+                    <input
+                      type="text"
+                      id="s6"
+                      name="s6"
+                      class="border-b-2 w-[200px] border-b-black border-dotted"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <label for="s7" class="text-lg">Subject 7</label>
+                    <input
+                      type="text"
+                      id="s7"
+                      name="s7"
+                      class="border-b-2 w-[200px] border-b-black border-dotted"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <label for="s8" class="text-lg">Subject 8</label>
+                    <input
+                      type="text"
+                      id="s8"
+                      name="s8"
+                      class="border-b-2 w-[200px] border-b-black border-dotted"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <input
+                  type="submit"
+                  value="Submit"
+                  class="bg-orange-500 px-14 py-3 rounded-xl font-semibold text-lg text-white"
+                />
+              </div> -->
+
+              <!-- New Next University registeration form start here -->
+              <div class="mt-8 flex justify-end">
+                <label for="date">Date :</label>
+                <input
+                  type="text"
+                  id="date"
+                  name="date"
+                  class="w-[200px] border-b-black border-b-2 border-dotted"
+                />
+              </div>
+
+              <div class="mt-8">
+                <h3 class="mb-6 text-lg uppercase font-bold">
+                  Personal Information
+                </h3>
+                <div class="flex flex-col space-y-8">
+                  <div class="flex justify-between">
+                    <label for="name" class="text-lg">Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      class="w-[650px] border-b-black border-b-2 border-dotted"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <label for="birth" class="text-lg">Date of Birth</label>
+                    <input
+                      type="text"
+                      id="birth"
+                      name="birth"
+                      class="border-b-2 w-[650px] border-dotted border-b-black"
+                    />
+                  </div>
+
+                  <div class="flex justify-between">
+                    <label for="nrc" class="text-lg">NRC No.</label>
+                    <input
+                      type="text"
+                      id="nrc"
+                      name="nrc"
+                      class="border-b-2 w-[650px] border-dotted border-b-black"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <label for="faName" class="text-lg">Father's Name</label>
+                    <input
+                      type="text"
+                      id="faName"
+                      name="faName"
+                      class="border-b-2 w-[650px] border-dotted border-b-black"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <label for="acQ" class="text-lg"
+                      >Academic <br />Qualification</label
+                    >
+                    <div class="flex items-end h-[45px]">
+                      <input
+                        type="text"
+                        id="acQ"
+                        name="acQ"
+                        class="border-b-2 w-[650px] border-dotted border-b-black h-8"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="flex justify-between">
+                    <label for="faName" class="text-lg">Phone Number</label>
+                    <input
+                      type="text"
+                      id="faName"
+                      name="faName"
+                      class="border-b-2 w-[650px] border-dotted border-b-black"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <label for="faName" class="text-lg">Email</label>
+                    <input
+                      type="text"
+                      id="faName"
+                      name="faName"
+                      class="border-b-2 w-[650px] border-dotted border-b-black"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <label for="add1" class="text-lg">Address</label>
+                    <textarea
+                      name="add"
+                      id="add"
+                      class="border-b-2 w-[650px] border-dotted border-b-black resize-none"
+                    ></textarea>
+                  </div>
+
+                  <div class="flex justify-between">
+                    <label for="gur" class="text-lg">Guardian</label>
+                    <input
+                      type="text"
+                      id="gur"
+                      name="gur"
+                      class="border-b-2 w-[650px] border-dotted border-b-black"
+                    />
+                  </div>
+
+                  <div class="flex justify-between">
+                    <label for="gPh" class="text-lg">Phone Number</label>
+                    <input
+                      type="text"
+                      id="gPh"
+                      name="gPh"
+                      class="border-b-2 w-[650px] border-dotted border-b-black"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <label for="add" class="text-lg">Address</label>
+                    <textarea
+                      name="add"
+                      id="add"
+                      class="border-b-2 w-[650px] border-dotted border-b-black resize-none"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="mt-9">
+                  <h3 class="text-lg font-bold mb-7 uppercase">
+                    Programme Preference
+                  </h3>
+                  <div class="flex flex-col space-y-8">
+                    <div class="flex justify-between">
+                      <label for="program" class="text-lg">Programme</label>
+                      <input
+                        type="text"
+                        id="program"
+                        name="program"
+                        class="border-b-2 w-[650px] border-dotted border-b-black"
+                      />
+                    </div>
+                    <div class="flex justify-between">
+                      <label for="program" class="text-lg">Intake</label>
+                      <input
+                        type="text"
+                        id="intake"
+                        name="intake"
+                        class="border-b-2 w-[650px] border-dotted border-b-black"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex mt-8">
+                  <div class="pe-10">
+                    <div>
+                      <input type="checkbox" id="certi" class="certi" />
+                      <label for="certi">Certificate</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="dip" class="dip" />
+                      <label for="dip">Diploma</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="master" class="master" />
+                      <label for="master">Master</label>
+                    </div>
+                  </div>
+
+                  <div class="pe-10">
+                    <div>
+                      <input type="checkbox" id="fou" class="fou" />
+                      <label for="fou">Foundation</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="deg" class="deg" />
+                      <label for="deg">Degree</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="phd" class="phd" />
+                      <label for="phd">Ph.D</label>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div>
+                      <input type="checkbox" id="abe2" class="abe2" />
+                      <label for="abe2">ABE</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="ncc2" class="ncc2" />
+                      <label for="ncc2">NCC</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="oth" class="oth" />
+                      <label for="oth">Others :</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center mt-10">
+                  <input
+                    type="submit"
+                    value="Submit"
+                    class="bg-[#173358] px-14 py-2 rounded-xl font-semibold text-lg text-white"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </main>
     </div>
-
     <script src="./js/student-form.js"></script>
   </body>
 </html>
