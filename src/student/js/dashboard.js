@@ -1,6 +1,5 @@
 const name_bar = document.getElementById("name-bar");
 const name_bar_r = document.getElementById("name-bar-right");
-let lastScrollTop = 0;
 
 window.addEventListener("load", () => {
   name_bar.classList.remove("ms-[-600px]");

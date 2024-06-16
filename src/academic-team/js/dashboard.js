@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const name_bar = document.getElementById("name-bar");
   const name_bar_r = document.getElementById("name-bar-right");
-  let lastScrollTop = 0;
 
   window.addEventListener("load", () => {
     name_bar.classList.remove("ms-[-600px]");
@@ -138,6 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const table_body = document.getElementById("table-body");
 
+  let data = [];
   let studentData = [];
 
   const fetchData = async () => {
@@ -146,7 +146,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
-      studentData = await response.json();
+      data = await response.json();
+
+      studentData = data.studentData;
       displayPaymentStudent(studentData.slice(0, 10));
     } catch (error) {
       console.log("Error fetching data: ", error);

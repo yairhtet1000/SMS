@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const list_view = document.getElementById("list-view");
   const grid_view = document.getElementById("grid-view");
 
+  let data = [];
   let studentData = [];
 
   const fetchData = async () => {
@@ -13,7 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
-      studentData = await response.json();
+      data = await response.json();
+      studentData = data.studentData;
       filterAndDisplayStudents("ALL", "ALL");
     } catch (error) {
       console.log("Error fetching data: ", error);
@@ -79,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "my-2",
           "rounded-full"
         );
-        imgTD.appendChild(imgStd);
+        imgTD.append(imgStd);
 
         const idTD = document.createElement("td");
         idTD.textContent = student.id;
@@ -131,15 +133,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const name = document.createElement("span");
         name.textContent = student.name;
-        name.classList.add("text-[#f1f1f1]");
+        name.classList.add("text-[#f1f1f1]", "text-center");
 
         const program = document.createElement("span");
-        if (student.program === "GED") {
+        if (student.program === "GED" || student.program === "IGCSE") {
           program.textContent = student.program;
         } else {
           program.textContent = student.program + " Level " + student.level;
         }
-        program.classList.add("text-[#f1f1f1]");
+        program.classList.add("text-[#f1f1f1]", "text-center");
 
         infoContainer.append(imgStd, name, program);
         showStudent.append(infoContainer);
@@ -149,18 +151,18 @@ document.addEventListener("DOMContentLoaded", () => {
     grid_view.click();
   };
 
-  const filterAndDisplayStudents = (selectedProgram, selectedLevel) => {
+  const filterAndDisplayStudents = (Program, Level) => {
     let filteredStudents = studentData;
 
-    if (selectedProgram !== "ALL") {
+    if (Program !== "ALL") {
       filteredStudents = filteredStudents.filter(
-        (student) => student.program === selectedProgram
+        (student) => student.program === Program
       );
     }
 
-    if (selectedLevel !== "ALL") {
+    if (Level !== "ALL") {
       filteredStudents = filteredStudents.filter(
-        (student) => student.level == selectedLevel
+        (student) => student.level == Level
       );
     }
 

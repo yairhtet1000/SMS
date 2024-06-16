@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/47fb921f6f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Total class</title>
+  </head>
+  <body>
+    <div>
+      <div class="w-[15%] h-[100vh] pe-5 left-0 fixed">
+        <div class="bg-[#173358] h-full">
+          <div
+            class="h-full py-5 text-[#f1f1f1] flex flex-col items-center justify-between"
+          >
+            <img
+              class="w-24"
+              src="../../public/images/school-logo.png"
+              alt=""
+            />
+
+            <nav class="flex flex-col leading-8">
+              <a class="" href="./dashboard.html"
+                ><i class="fa-solid fa-house"></i> Dashboard</a
+              >
+              <a class="" href="./student-info.html"
+                ><i class="fa-solid fa-tv"></i> Student Information</a
+              >
+              <a class="" href="./course-material.html"
+                ><i class="fa-solid fa-book"></i> Course Material</a
+              >
+              <a class="" href="./student-form.html"
+                ><i class="fa-solid fa-file-pen"></i> Student Form</a
+              >
+              <a class="" href="./attendance.html"
+                ><i class="fa-solid fa-clipboard-user"></i> Attendance</a
+              >
+            </nav>
+
+            <button class="logout p-3">Logout</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-[15%] h-[100vh] ps-5 fixed right-0">
+        <div
+          class="bg-[#173358] my-3 p-5 flex flex-col items-center rounded-s-lg"
+          id="name-bar-right"
+        >
+          <img
+            class="size-24 my-2 mx-auto rounded-full"
+            src="../../public/images/temp-profile.jpg"
+            alt=""
+          />
+          <span class="text-[#f1f1f1]">Yair Htet</span>
+          <span class="text-[#f1f1f1]">NCC level 4</span>
+        </div>
+      </div>
+
+      <!-- Main Body width -->
+      <main class="w-full">
+        <!-- container width for content -->
+        <div class="w-[70%] mx-auto p-3">
+          <!-- start here -->
+
+          <a
+            href="./dashboard.html"
+            class="w-full block bg-[#E1EFF6] p-2 rounded-md"
+          >
+            <img
+              src="../../public/images/arrow-left-solid.svg"
+              alt="left arrow"
+              class="size-8"
+            />
+          </a>
+
+          <h2
+            class="inline-block font-bold text-2xl my-3 px-16 py-5 rounded-xl bg-[#173358] text-[#f1f1f1]"
+          >
+            Total Classes
+          </h2>
+
+          <table
+            class="table-auto w-full text-center border-separate border-spacing-y-1"
+          >
+            <thead>
+              <tr class="h-12 text-white bg-[#173358]">
+                <th class="">Class Name</th>
+                <th class="">Total student</th>
+                <th class="">Total lecturers</th>
+                <th class="">Total courses</th>
+                <th class="">Intake</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr class="h-12 bg-[#173358] text-[#f1f1f1]">
+                <td>NCC lvl 4 Senior</td>
+                <td>12</td>
+                <td>3</td>
+                <td>4</td>
+                <td>March</td>
+              </tr>
+              <tr class="h-12 bg-[#173358] text-[#f1f1f1]">
+                <td>NCC lvl 4 Junior</td>
+                <td>12</td>
+                <td>3</td>
+                <td>4</td>
+                <td>March</td>
+              </tr>
+              <tr class="h-12 bg-[#173358] text-[#f1f1f1]">
+                <td>NCC lvl 3</td>
+                <td>12</td>
+                <td>3</td>
+                <td>4</td>
+                <td>March</td>
+              </tr>
+              <tr class="h-12 bg-[#173358] text-[#f1f1f1]">
+                <td>NCC lvl 5 Senior</td>
+                <td>12</td>
+                <td>3</td>
+                <td>4</td>
+                <td>March</td>
+              </tr>
+              <tr class="h-12 bg-[#173358] text-[#f1f1f1]">
+                <td>NCC lvl 5 Junior</td>
+                <td>12</td>
+                <td>3</td>
+                <td>4</td>
+                <td>March</td>
+              </tr>
+              <tr class="h-12 bg-[#173358] text-[#f1f1f1]">
+                <td>Pre-GED</td>
+                <td>12</td>
+                <td>3</td>
+                <td>4</td>
+                <td>March</td>
+              </tr>
+              <tr class="h-12 bg-[#173358] text-[#f1f1f1]">
+                <td>GED</td>
+                <td>12</td>
+                <td>3</td>
+                <td>4</td>
+                <td>March</td>
+              </tr>
+              <tr class="h-12 bg-[#173358] text-[#f1f1f1]">
+                <td>Pre-IGCSE</td>
+                <td>12</td>
+                <td>3</td>
+                <td>4</td>
+                <td>March</td>
+              </tr>
+              <tr class="h-12 bg-[#173358] text-[#f1f1f1]">
+                <td>IGCSE</td>
+                <td>12</td>
+                <td>3</td>
+                <td>4</td>
+                <td>March</td>
+              </tr>
+              <tr class="h-12 bg-[#173358] text-[#f1f1f1]">
+                <td>DBM</td>
+                <td>12</td>
+                <td>3</td>
+                <td>4</td>
+                <td>March</td>
+              </tr>
+              <tr class="h-12 bg-[#173358] text-[#f1f1f1]">
+                <td>DDM</td>
+                <td>12</td>
+                <td>3</td>
+                <td>4</td>
+                <td>March</td>
+              </tr>
+              <tr class="h-12 bg-[#173358] text-[#f1f1f1]">
+                <td>MBAr</td>
+                <td>12</td>
+                <td>3</td>
+                <td>4</td>
+                <td>March</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
