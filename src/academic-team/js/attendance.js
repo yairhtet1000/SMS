@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     students.forEach((student) => {
       const tableRow = document.createElement("tr");
       tableRow.id = student.id;
-      tableRow.classList.add("bg-[#97d2fb]");
+      tableRow.classList.add("bg-[#bce1f9]");
 
       const tdImg = document.createElement("td");
       const Img = document.createElement("img");

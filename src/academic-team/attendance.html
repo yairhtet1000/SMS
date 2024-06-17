@@ -74,9 +74,9 @@
             Attendance Table
           </h2>
 
-          <div class="bg-[#E1EFF6]">
+          <div class="bg-[#E1EFF6] p-3 rounded-md">
             <div class="w-full p-3 flex justify-around">
-              <div class="bg-[#173358] p-1 text-[#f1f1f1] rounded-md">
+              <div class="bg-[#173358] px-3 py-1 text-[#f1f1f1] rounded-md">
                 <input type="radio" name="class" id="ncc" class="hidden" />
                 <label for="ncc">
                   NCC Level:
@@ -93,7 +93,7 @@
                 </label>
               </div>
 
-              <div class="bg-[#0D8989] p-1 text-[#f1f1f1] rounded-md">
+              <div class="bg-[#0D8989] px-3 py-1 text-[#f1f1f1] rounded-md">
                 <input type="radio" name="class" id="abe" class="hidden" />
                 <label for="abe">
                   ABE Level:
@@ -110,12 +110,12 @@
                 </label>
               </div>
 
-              <div class="bg-[#FF8A00] p-1 text-[#111] rounded-md">
+              <div class="bg-[#FF8A00] px-3 py-1 text-[#111] rounded-md">
                 <input type="radio" name="class" id="igcse" class="hidden" />
                 <label for="igcse">IGCSE</label>
               </div>
 
-              <div class="bg-[#FF8A00] p-1 text-[#111] rounded-md">
+              <div class="bg-[#FF8A00] px-3 py-1 text-[#111] rounded-md">
                 <input type="radio" name="class" id="ged" class="hidden" />
                 <label for="ged">GED</label>
               </div>
@@ -125,86 +125,16 @@
               class="w-full table-auto border-separate border-spacing-y-1 text-center"
             >
               <thead>
-                <tr class="h-14 bg-[#97d2fb] rounded-md">
+                <tr class="h-14 bg-[#bce1f9]">
                   <th>Image</th>
                   <th>Name</th>
                   <th>Date</th>
                   <th>Subject</th>
-                  <th class="">Check</th>
+                  <th>Check</th>
                 </tr>
               </thead>
 
-              <tbody id="attendance-table">
-                <!-- <tr class="bg-[#97d2fb]">
-                  <td>
-                    <img src="" alt="" class="size-10 m-auto rounded-full" />
-                  </td>
-                  <td>Min Hein Htut</td>
-                  <td>OOSAD</td>
-                  <td>11/6/2024 - 1:00 PM</td>
-                  <td class="flex justify-around items-center h-12">
-                    <input
-                      type="radio"
-                      name="attendance"
-                      value="present"
-                      id="present-btn"
-                      class="hidden"
-                    />
-                    <label
-                      for="present-btn"
-                      class="bg-[#3DC84B] px-2 py1 rounded-md"
-                      >Present</label
-                    >
-
-                    <input
-                      type="radio"
-                      name="attendance"
-                      value="absent"
-                      id="absent-btn"
-                      class="hidden"
-                    />
-                    <label
-                      for="absent-btn"
-                      class="bg-[#DA3C3C] px-2 py1 rounded-md"
-                      >Absent</label
-                    >
-                  </td>
-                </tr>
-
-                <tr class="bg-[#97d2fb]">
-                  <td>
-                    <img src="" alt="" class="size-10 m-auto rounded-full" />
-                  </td>
-                  <td>Min Hein Htut</td>
-                  <td>OOSAD</td>
-                  <td>11/6/2024 - 1:00 PM</td>
-                  <td class="m-auto flex justify-around items-center h-12">
-                    <input
-                      type="radio"
-                      name="attendance"
-                      id="present-btn"
-                      class="hidden"
-                    />
-                    <label
-                      for="present-btn"
-                      class="bg-[#3DC84B] px-2 py1 rounded-md"
-                      >Present</label
-                    >
-
-                    <input
-                      type="radio"
-                      name="attendance"
-                      id="absent-btn"
-                      class="hidden"
-                    />
-                    <label
-                      for="absent-btn"
-                      class="bg-[#DA3C3C] px-2 py1 rounded-md"
-                      >Absent</label
-                    >
-                  </td>
-                </tr> -->
-              </tbody>
+              <tbody id="attendance-table"></tbody>
             </table>
           </div>
         </div>
