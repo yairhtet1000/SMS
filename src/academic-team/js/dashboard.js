@@ -194,3 +194,44 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 });
+
+const teather_con = document.getElementById("teacher-information");
+
+const teacthers = [
+  {
+    name: "Dr. Myat Mon Aye",
+    image: "../../public/images/teacher-icon.jpg",
+  },
+  {
+    name: "Dr. Ei Ei Khin",
+    image: "../../public/images/teacher-icon.jpg",
+  },
+  {
+    name: "Dr. Aye Aye",
+    image: "../../public/images/teacher-icon.jpg",
+  },
+  {
+    name: "Dr. San San Maw",
+    image: "../../public/images/teacher-icon.jpg",
+  },
+  {
+    name: "Dr. Zin Thandar",
+    image: "../../public/images/teacher-icon.jpg",
+  },
+];
+
+for (let i = 0; i < teacthers.length; i++) {
+  const element = teacthers[i];
+  teather_con.innerHTML += `
+                    <div class="w-full p-3 flex items-center justify-between border-b border-gray-900" >
+                    <img
+                      src="${element.image}"
+                      alt=""
+                      class="size-16 rounded-full bg-[#D9D9D9] shadow-md"
+                    />
+                    <span class="font-bold ">${element.name}</span>
+                  </div>
+
+  
+  `;
+}
