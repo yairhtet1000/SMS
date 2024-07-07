@@ -96,7 +96,7 @@ for (let i = 0; i < courseMaterials.length; i++) {
             <h2 class="text-end text-[11px]">${course.title}</h2>
           </div>
           <div class="p-5  select-none">
-            <h2 class="text-end text-black bg-black ">21 files</h2>
+            <h2 class="text-end text-black">21 files</h2>
           </div>
         </div>
         `;
